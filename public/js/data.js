@@ -83,7 +83,7 @@ function getRange() {
             params.endDate = '10/02/17';
             break;
         default:
-            params.startDate = '11/01/16';
+            params.startDate = '08/01/17';
             params.endDate = '10/02/17';
     }
     return params;
