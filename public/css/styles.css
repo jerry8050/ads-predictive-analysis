@@ -24,53 +24,51 @@ body {
 h1 {
 	font-family: 'Playfair Display', serif;
 	color: yellow;
-	font-size: 10em;
 	margin: 0.25em 0 0 0;
 	width: 100%;
+	font-size: 2.5em;
 }
 
 h2 {
-	margin: 0;
+	margin: 0 50% 0 0;
 	font-weight: 100;
-	font-size: 2.25em;
+	font-size: 1.25em;
 }
 
 header,
 main {
 	max-width: 1000px;
 	margin: auto;
-	padding: 0 2em;
 }
 
 header {
 	text-align: left;
 }
 
+
 figure {
 	margin: 0;
 	overflow: hidden;
-	height: 480px;
-	float: right;
-	width: 80%;
-	margin-right: -15%;
+	height: 200px;
+	width: 100%;
+	float: left;
 }
 
 figure img {
-	height: 100%;
+	width: 150%;
 	opacity: 0.25;
 }
 
+
 .hgroup {
 	position: absolute;
-}
-
-main {
-	margin-top: -7em;
+	padding: 2em;
 }
 
 .form {
-	position: absolute;
+	padding: 1em;
 }
+
 
 .results {
 	width: 100%;
@@ -150,19 +148,76 @@ fieldset label input {
 .table-wrapper {
 	width: 100%;
 	overflow-y: scroll;
-	padding-top: 8em;
 }
 
 
 footer {
 	font-size: 0.75em;
 	margin: 4em 0;
-	color: #666;
+	color: #999;
 }
 
 footer span {
 	color: red;
 }
+
+
+
+@media (min-width: 700px) {
+	h1 {
+  	font-size: 10em;
+  }
+  h2 {
+  	font-size: 1.5em;
+  	margin-right: 0;
+  }
+
+	figure {
+		height: 500px;
+		float: right;
+		width: 75%;
+		margin-right: -12%;
+	}
+	main {
+		margin-top: -9em;
+	}
+
+	figure img {
+		width: auto;
+		height: 100%;
+		opacity: 0.25;
+	}
+	.form {
+		position: absolute;
+		padding: 2em 2em 0 3em;
+		border: 2px solid #eee;
+		margin-left: -3em;
+  }
+
+.table-wrapper {
+	padding-top: 10em;
+}
+
+}
+
+
+
+@media(min-width: 1000px) {
+	header, main {
+		padding: 0 2em;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
