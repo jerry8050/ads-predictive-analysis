@@ -7,7 +7,7 @@ router.get('/', function (req, res, next) {
     res.render('index', {title: 'Express'});
 });
 
-router.get('/dashboard', function (req, res, next) {
+router.get('/api/dashboard', function (req, res, next) {
     return service.show(req,res);
 });
 
