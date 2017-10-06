@@ -24,15 +24,30 @@ body {
 h1 {
 	font-family: 'Playfair Display', serif;
 	color: yellow;
-	margin: 0.25em 0 0 0;
+	margin: 0 0 0.2em;
 	width: 100%;
 	font-size: 2.5em;
+	line-height: 1;
 }
 
 h2 {
 	margin: 0 50% 0 0;
 	font-weight: 100;
 	font-size: 1.25em;
+}
+h3 {
+	font-size: 0.75em;
+	text-transform: uppercase;
+	margin-top: -1em;
+	color: #fff;
+	background: #000;
+	display: inline-block;
+	font-weight: 100;
+	position: absolute;
+	right: 0;
+	padding: 0.5em 1em;
+	line-height: 1;
+	border-radius: 2em;
 }
 
 header,
@@ -153,7 +168,7 @@ fieldset label input {
 
 footer {
 	font-size: 0.75em;
-	margin: 4em 0;
+	margin: 7em 0 3em;
 	color: #999;
 }
 
@@ -163,13 +178,24 @@ footer span {
 
 
 
-@media (min-width: 700px) {
+@media (min-width: 1024px) {
 	h1 {
-  	font-size: 10em;
+  	font-size: 8em;
+  	margin-bottom: 0.3em;
+  	font-weight: 900i;
   }
   h2 {
-  	font-size: 1.5em;
+  	font-size: 1.75em;
   	margin-right: 0;
+  }
+  header, main {
+		padding: 0 2em;
+	}
+  .hgroup {
+  	padding-top: 5em;
+  }
+  h3 {
+  	margin-top: 1em;
   }
 
 	figure {
@@ -179,7 +205,7 @@ footer span {
 		margin-right: -12%;
 	}
 	main {
-		margin-top: -9em;
+		margin-top: -10em;
 	}
 
 	figure img {
@@ -190,22 +216,14 @@ footer span {
 	.form {
 		position: absolute;
 		padding: 2em 2em 0 3em;
-		border: 2px solid #eee;
+		border: 5px solid #eee;
 		margin-left: -3em;
   }
 
-.table-wrapper {
-	padding-top: 10em;
-}
-
-}
-
-
-
-@media(min-width: 1000px) {
-	header, main {
-		padding: 0 2em;
+	.table-wrapper {
+		padding-top: 10em;
 	}
+
 }
 
 
@@ -220,9 +238,7 @@ footer span {
 
 
 
-
-
-
+/* Table sorting etc */
 
 .results th[role=columnheader]:not(.no-sort) {
 	cursor: pointer;
