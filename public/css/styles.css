@@ -77,7 +77,7 @@ figure img {
 
 .hgroup {
 	position: absolute;
-	padding: 2em;
+	padding: 2em 2em 2em 0;
 }
 
 .form {
@@ -289,18 +289,23 @@ footer span {
 
 .results tbody td.lgreen {
 	color: #dcffe5;
+	font-weight: bold;
 }
 
 .results tbody td.mgreen {
 	 color: #8effab;
+	 font-weight: bold;
 }
 
 .results tbody td.dgreen {
-	color: #03ff07;
+	color: green;
+	font-weight: bold;
 }
 
 .results tbody td.red {
 	color: #03ff07;
+	font-weight: bold;
+
 }
 
 
