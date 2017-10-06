@@ -88,13 +88,28 @@ figure img {
 .results {
 	width: 100%;
 	color: #444;
+}
+
+.heading {
 	margin-top: 3em;
 }
 
+.heading .segment {
+	width: 20%;
+}
+
+.results .segment {
+	text-align: left;
+}
+
+.splitter {
+	border-right: 3px solid #000;
+}
+
+
 
 .results th {
-	padding: 1.5em 0.5em;
-  text-align: left;
+	padding: 1.5em 1em;
   border-bottom: 3px solid #000;
   color: #000;
 	background: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eee));
@@ -105,6 +120,7 @@ figure img {
 	cursor: pointer;
 }
 
+
 .results tbody td {
   border-bottom: 1px solid #ddd;
   padding: 1em 0.75em;
@@ -112,6 +128,14 @@ figure img {
  	color: #666;
  	font-size: 0.875em;
 }
+
+.heading tbody td {
+	width: 40%;
+	background: transparent;
+	text-transform: uppercase;
+	color: #0099cc;
+}
+
 
 .results tr td:first-child {
  	text-align: left;
@@ -202,7 +226,7 @@ footer span {
   	font-weight: 900i;
   }
   h2 {
-  	font-size: 1.75em;
+  	font-size: 2em;
   	margin-right: 0;
   }
   header, main {
@@ -245,15 +269,38 @@ footer span {
     width:auto;
 	}
 
+	.results th {
+		width: 20%;
+	}
+
+
+	.heading td {
+		border-top: 2px solid #fff;
+		border-right: 2px solid #fff;
+	}
+	.heading .segment {
+    border-top: none;
+	}
+
 }
 
 
 
+.results tbody td.lgreen {
+	color: #dcffe5;
+}
 
+.results tbody td.mgreen {
+	 color: #8effab;
+}
 
+.results tbody td.dgreen {
+	color: #03ff07;
+}
 
-
-
+.results tbody td.red {
+	color: #03ff07;
+}
 
 
 
