@@ -14,6 +14,7 @@ html(class='no-js' lang)
         script(src='js/tablesort.min.js')
         <!-- Include sort types you need, check /js/sorts -->
         script(src='js/sorts/tablesort.number.min.js')
+        script(src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous")
 
     body
         header(class="clearfix")
@@ -29,11 +30,11 @@ html(class='no-js' lang)
 
             label(class="input")
                 span Start date
-                input(type="month" name="")
+                input(type="month" id="start" name="")
 
             label(class="input")
                 span End date
-                input(type="month" name="")
+                input(type="month" id="end" name="")
 
             fieldset
                 legend Data Filters
@@ -56,13 +57,13 @@ html(class='no-js' lang)
             fieldset
                 legend Select Predefined Range
                 label
-                    input(type="radio" name="range")
+                    input(type="radio" name="range" value="ytd")
                     | YTD
                 label
-                    input(type="radio" name="range")
+                    input(type="radio" name="range" value="py")
                     | Prior Year
                 label
-                    input(type="radio" name="range")
+                    input(type="radio" name="range" value='pym')
                     | Prior Year by Month
                 label
                     input(type="radio" name="range")
@@ -93,19 +94,11 @@ html(class='no-js' lang)
                         th Ins Capacity
 
                 tbody
-                <!-- LOOP YOUR ROWS -->
-                    tr
-                        td Krux - Searched Waterfront Home
-                        td 20%
-                        td 90%
-                        td 10%
-                        td 1.3m
-                        td 52%
-                        td 5.2
-                <!-- END YOUR ROW LOOP -->
 
     footer
      p Made with <span>♥</span> by Brian, Jerry, Rene, Aaron, Shomi &amp; Sam
      p Hackathon 2017
+
+    script(src="js/data.js")
     script
         include ../javascript/table.js
