@@ -48,37 +48,37 @@ html(class='no-js' lang)
                     input(type="radio" name="range" value='pym')
                     | Prior Year by Month
                 label
-                    input(type="radio" name="range")
+                    input(type="radio" name="range" value='pm')
                     | Prior Month
                 label
-                    input(type="radio" name="range")
+                    input(type="radio" name="range" value='mtd')
                     | MTD
+                //label
+                //    input(type="radio" name="range" value='pw')
+                //    | Prior Week
                 label
-                    input(type="radio" name="range")
-                    | Prior Week
-                label
-                    input(type="radio" name="range")
+                    input(type="radio" name="range" value='p30d')
                     | Prior 30 days
                 label
-                    input(type="radio" name="range")
+                    input(type="radio" name="range" value='p60d')
                     | Prior 60 days
 
             fieldset(class="filters")
                 legend Data Filters
                 label
-                    input(type='checkbox' name='agreement')
+                    input(type='checkbox' name='segment')
                     | Segment
                 label
-                    input(type="checkbox" name="")
+                    input(type="checkbox" name="industry")
                     | Industry
                 label
-                    input(type="checkbox" name="")
+                    input(type="checkbox" name="source")
                     | Data Source Summary
                 label
-                    input(type="checkbox" name="")
+                    input(type="checkbox" name="month")
                     | Month
                 label
-                    input(type="checkbox" name="")
+                    input(type="checkbox" name="quarter")
                     | Quarter
 
             input(type="button" class="submit" value="Let's Doge!")
@@ -89,12 +89,12 @@ html(class='no-js' lang)
                 thead
                     tr
                         th(data-sort-method='none') Segment
-                        th MB Index
-                        th MB Z-Score
-                        th MB Capacity
-                        th Ins Index
-                        th Ins Z-Score
-                        th Ins Capacity
+                        th Mortgage Index
+                        //th MB Z-Score
+                        th Mortgage Capacity
+                        th Insurance Index
+                        //th Ins Z-Score
+                        th Insurance Capacity
 
                 tbody
 
