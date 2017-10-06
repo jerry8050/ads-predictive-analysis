@@ -14,13 +14,18 @@ function getData (parameters) {
             let mIndex = parseInt(mortgage.index, 10);
             let iIndex = parseInt(insu.index, 10);
 
-            let mColor = (mIndex > 100 && mIndex <= 125) ? 'lgreen' :
-                        (mIndex > 125 && mIndex <= 150) ? 'mgreen' :
-                        (mIndex > 150) ? 'dgreen' : 'red';
+            // let mColor = (mIndex > 100 && mIndex <= 125) ? 'lgreen' :
+            //             (mIndex > 125 && mIndex <= 150) ? 'mgreen' :
+            //             (mIndex > 150) ? 'dgreen' : 'red';
 
-            let iColor = (iIndex > 100 && iIndex <= 125) ? 'lgreen' :
-                        (iIndex > 125 && iIndex <= 150) ? 'mgreen' :
-                        (iIndex > 150) ? 'dgreen' : 'red';
+            let mColor = (mIndex > 150) ? 'dgreen' : '';
+
+
+            // let iColor = (iIndex > 100 && iIndex <= 125) ? 'lgreen' :
+            //             (iIndex > 125 && iIndex <= 150) ? 'mgreen' :
+            //             (iIndex > 150) ? 'dgreen' : 'red';
+
+            let iColor =  (iIndex > 150) ? 'dgreen' : '';
 
             // .css("background-color", "yellow")
             let row = '<tr>';
