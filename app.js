@@ -42,12 +42,12 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-app.listen(5000, (err, resp)=>{
+let port =  process.env.PORT || 4000
+app.listen(port, (err, resp)=>{
   if(err){
     console.log("Couldn't start server");
   } else{
-      console.log("Server running on port 5000");
+      console.log(`Server running on port ${port}`);
   }
 })
 
