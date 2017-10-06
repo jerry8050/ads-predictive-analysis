@@ -1,0 +1,110 @@
+doctype html
+html(class='no-js' lang)
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible" content="ie=edge")
+        title Adoge. Such Forecast. Much Media. So Wow
+        meta(name="description" content="Make Ads Great Again")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+
+        link(rel="stylesheet" href="css/main.css")
+        link(rel="stylesheet" href="css/styles.css")
+        link(href="https://fonts.googleapis.com/css?family=Playfair+Display:400,900i" rel="stylesheet")
+
+        script(src='js/tablesort.min.js')
+        <!-- Include sort types you need, check /js/sorts -->
+        script(src='js/sorts/tablesort.number.min.js')
+
+    body
+        header(class="clearfix")
+            figure(class="doge")
+                img(src="img/doge.jpg" alt="")
+            div(class="hgroup")
+                h1 ADoge
+                h2 Such Forecast. Much Media. So Wow.
+
+    main
+        form(action="" method="" class="form")
+
+            label(class="input")
+                span Start date
+                input(type="date" name="")
+
+            label(class="input")
+                span End date
+                input(type="date" name="")
+
+            fieldset
+                legend Data Filters
+                label
+                    input(type='checkbox' name='agreement')
+                    | Segment
+                label
+                    input(type="checkbox" name="")
+                    | Category (industry)
+                label
+                    input(type="checkbox" name="")
+                    | Data Source Summary
+                label
+                    input(type="checkbox" name="")
+                    | Month
+                label
+                    input(type="checkbox" name="")
+                    | Quarter
+
+            fieldset
+                legend Select Predefined Range
+                label
+                    input(type="radio" name="range")
+                    | YTD
+                label
+                    input(type="radio" name="range")
+                    | Prior Year
+                label
+                    input(type="radio" name="range")
+                    | Prior Year by Month
+                label
+                    input(type="radio" name="range")
+                    | Prior Month
+                label
+                    input(type="radio" name="range")
+                    | MTD
+                label
+                    input(type="radio" name="range")
+                    | Prior Week
+                label
+                    input(type="radio" name="range")
+                    | Prior 30 days
+                label
+                    input(type="radio" name="range")
+                    | Prior 60 days
+
+        div(class="table-wrapper")
+            table(class="results" cellspacing="0" id="table")
+                thead
+                    tr
+                        th(data-sort-method='none') Category
+                        th Industry 1
+                        th Industry 2
+                        th Industry 3
+                        th Volume (Capacity/Impr) 1
+                        th P-Value
+                        th z-score
+
+                tbody
+                <!-- LOOP YOUR ROWS -->
+                    tr
+                        td Krux - Searched Waterfront Home
+                        td 20%
+                        td 90%
+                        td 10%
+                        td 1.3m
+                        td 52%
+                        td 5.2
+                <!-- END YOUR ROW LOOP -->
+
+    footer
+     p Made with <span>♥</span> by Brian, Jerry, Rene, Aaron, Shomi &amp; Sam
+     p Hackathon 2017
+    script
+        include ../javascript/table.js
