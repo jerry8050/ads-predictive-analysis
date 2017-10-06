@@ -11,11 +11,11 @@ function getData (parameters) {
 
             let row = '<tr>';
             row += '<td>' + item.segment + '</td>';
-            row += '<td>' + mortgage.index + '</td>';
-            row += '<td>' + mortgage.z_score + '</td>';
+            row += '<td>' + parseInt(mortgage.index, 10) + '</td>';
+            // row += '<td>' + mortgage.z_score + '</td>';
             row += '<td>' + mortgage.total_impressions + '</td>';
-            row += '<td>' + insu.index + '</td>';
-            row += '<td>' + insu.z_score + '</td>';
+            row += '<td>' + parseInt(insu.index, 10) + '</td>';
+            // row += '<td>' + insu.z_score + '</td>';
             row += '<td>' + insu.total_impressions + '</td>';
             rows += row + '<tr>';
         });
@@ -49,50 +49,49 @@ function getRange() {
             params.endDate = '10/02/17';
             break;
         case 'pm':
-            params.startDate = '11/01/16';
+            params.startDate = '09/02/17';
             params.endDate = '10/02/17';
             break;
         case 'mtd':
             params.startDate = '11/01/16';
             params.endDate = '10/02/17';
             break;
-        case 'pw':
-            params.startDate = '11/01/16';
-            params.endDate = '10/02/17';
-            break;
+        // case 'pw':
+        //     params.startDate = '11/01/16';
+        //     params.endDate = '10/02/17';
+        //     break;
         case 'p30d':
-            params.startDate = '11/01/16';
+            params.startDate = '09/02/17';
             params.endDate = '10/02/17';
             break;
         case 'p60d':
-            params.startDate = '11/01/16';
+            params.startDate = '08/02/17';
             params.endDate = '10/02/17';
             break;
         default:
             params.startDate = '11/01/16';
             params.endDate = '10/02/17';
     }
-
     return params;
-
 }
 
 function getCalData(parameters) {
     let start = new Date(parameters.startDate);
     let end = new Date(parameters.endDate);
 
+    let startMonth = (start.getMonth() + 1) < 10 ? '0' + (start.getMonth() + 1) : (start.getMonth() + 1);
+    let endMonth = (end.getMonth() + 1) < 10 ? '0' + (end.getMonth() + 1) : (end.getMonth() + 1);
+
     return {
-        start : start.getFullYear() +  '-' + start.getMonth(),
-        end : end.getFullYear() +  '-' + end.getMonth()
+        start : start.getFullYear() +  '-' + startMonth,
+        end : end.getFullYear() +  '-' + endMonth
     };
 }
 
 $(function(){
     $(document).ready(function() {
         let parameters = getRange();
-
         let cal = getCalData(parameters);
-
         $('#start').val(cal.start);
         $('#end').val(cal.end);
 
@@ -101,16 +100,14 @@ $(function(){
 });
 
 
-$('.form #test1').click(function() {
-    console.log(event)
-    console.log( "Handler for .click() called." );
+$('.form .submit').click(function() {
+    let parameters = getRange();
+    let cal = getCalData(parameters);
 
-    console.log();
-
-    getRange();
+    $('#start').val(cal.start);
+    $('#end').val(cal.end);
 
     getCheckBox();
-    // $('#myForm input').on('change', function() {
-    // });
 
+    getData(parameters);
 });
