@@ -3,8 +3,8 @@ html(class='no-js' lang)
     head
         meta(charset="utf-8")
         meta(http-equiv="x-ua-compatible" content="ie=edge")
-        title Adoge. Such Forecast. Much Media. So Wow.
-        meta(name="description" content="Make Ads Great Again.")
+        title Personator. Powered by Adoge.
+        meta(name="description" content="Such Forecast. Much Media. So Wow.")
         meta(name="viewport" content="width=device-width, initial-scale=1")
 
         link(rel="stylesheet" href="css/main.css")
@@ -22,7 +22,7 @@ html(class='no-js' lang)
                 img(src="img/doge.jpg" alt="")
             div(class="hgroup")
                 h3 Powered by Adoge
-                h1 ADoge
+                h1 Personator
                 h2 Such Forecast. Much Media. So Wow.
 
     main
@@ -35,24 +35,6 @@ html(class='no-js' lang)
             label(class="input")
                 span End date
                 input(type="month" id="end" name="")
-
-            fieldset
-                legend Data Filters
-                label
-                    input(type='checkbox' name='agreement')
-                    | Segment
-                label
-                    input(type="checkbox" name="")
-                    | Industry
-                label
-                    input(type="checkbox" name="")
-                    | Data Source Summary
-                label
-                    input(type="checkbox" name="")
-                    | Month
-                label
-                    input(type="checkbox" name="")
-                    | Quarter
 
             fieldset
                 legend Select Predefined Range
@@ -80,6 +62,27 @@ html(class='no-js' lang)
                 label
                     input(type="radio" name="range")
                     | Prior 60 days
+
+            fieldset(class="filters")
+                legend Data Filters
+                label
+                    input(type='checkbox' name='agreement')
+                    | Segment
+                label
+                    input(type="checkbox" name="")
+                    | Industry
+                label
+                    input(type="checkbox" name="")
+                    | Data Source Summary
+                label
+                    input(type="checkbox" name="")
+                    | Month
+                label
+                    input(type="checkbox" name="")
+                    | Quarter
+
+            input(type="button" class="submit" value="Let's Doge!")
+
 
         div(class="table-wrapper")
             table(class="results" cellspacing="0" id="table")
