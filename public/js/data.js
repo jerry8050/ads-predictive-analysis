@@ -9,14 +9,28 @@ function getData (parameters) {
             let mortgage = item.industries['Mortgage & Banking'];
             let insu = item.industries['Insurance'];
 
+            let color = 'lgreen';
+
+            let mIndex = parseInt(mortgage.index, 10);
+            let iIndex = parseInt(insu.index, 10);
+
+            let mColor = (mIndex > 100 && mIndex <= 125) ? 'lgreen' :
+                        (mIndex > 125 && mIndex <= 150) ? 'mgreen' :
+                        (mIndex > 150) ? 'dgreen' : 'red';
+
+            let iColor = (iIndex > 100 && iIndex <= 125) ? 'lgreen' :
+                        (iIndex > 125 && iIndex <= 150) ? 'mgreen' :
+                        (iIndex > 150) ? 'dgreen' : 'red';
+
+            // .css("background-color", "yellow")
             let row = '<tr>';
             row += '<td>' + item.segment + '</td>';
-            row += '<td>' + parseInt(mortgage.index, 10) + '</td>';
+            row += '<td class=' + mColor + '>' + parseInt(mortgage.index, 10) + '</td>';
             // row += '<td>' + mortgage.z_score + '</td>';
-            row += '<td>' + mortgage.total_impressions + '</td>';
-            row += '<td>' + parseInt(insu.index, 10) + '</td>';
+            row += '<td class=' + mColor + '>' + mortgage.total_impressions + '</td>';
+            row += '<td class=' + iColor + '>' + parseInt(insu.index, 10) + '</td>';
             // row += '<td>' + insu.z_score + '</td>';
-            row += '<td>' + insu.total_impressions + '</td>';
+            row += '<td class=' + iColor + '>' + insu.total_impressions + '</td>';
             rows += row + '<tr>';
         });
         $('.results tbody').html(rows);
